@@ -102,12 +102,7 @@ async def expandToggles(page, exec):
 #         new_para.style = style
 #     return new_para
 
-async def main():
-    global links
-
-    print("Launching headless browser.")
-    browser = await launch()
-
+async def loginToMyUCF(browser):
     page = await browser.newPage()
 
     await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
@@ -147,23 +142,12 @@ async def main():
     await page.waitForNavigation({ 'waitUntil': 'networkidle0'})
 
     await page.waitForSelector('#fldra_FX_STUDENT_SLFSRV_MENU_90')
-    
-    #await page.click('#fldra_FX_STUDENT_SLFSRV_MENU_90')
 
-    #await page.screenshot({'path': 'page.png', 'fullPage': True})
+    return page
 
-    print("Scanning links. Please wait. This will take a while.")
-
-    await expandToggles(page, scanForLinks)
-
-    print("Found %s unique links." % (len(links)))
-
-    print("Closing browser.")
-    await browser.close()
-
-    print("Exporting links to Word document file.")
+async def exportLinksToDocument(links, title):
     document = Document()
-    document.add_heading('Sitemap', 0)
+    document.add_heading(title, 0)
 
     def sort_link_by_sherlock(link):
         return link.sherlock
@@ -189,6 +173,57 @@ async def main():
                     link.paragraph.paragraph_format.left_indent = parent_link.paragraph.paragraph_format.left_indent + Inches(0.5)
                     parent_link.paragraph._p.addnext(link.paragraph._p)
 
-    document.save('results.docx')
+    document.save('%s.docx' % (title))
+
+async def exportTextToDocument(text_lines, title):
+    document = Document()
+    document.add_heading(title, 0)
+    for line in text_lines:
+        p = document.add_paragraph(
+            "%s" % (line), style="List Bullet"
+        )
+        p.paragraph_format.left_indent = Inches(0)
+    document.save('%s.docx' % (title))
+
+async def main():
+    global links
+
+    print("Launching headless browser.")
+    browser = await launch()
+
+    page = await loginToMyUCF(browser)
+
+    print("Scanning links. Please wait. This will take a while.")
+
+    await expandToggles(page, scanForLinks)
+
+    print("Found %s unique links." % (len(links)))
+
+    #print("Searching ...") #TODO click on and scan additional subpages for student center
+    
+    #await page.goto('https://my.ucf.edu/psp/IHPROD/EMPLOYEE/CSPROD/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?pt_fname=FX_STUDENT_SLFSRV_MENU_90&FolderPath=PORTAL_ROOT_OBJECT.FX_STUDENT_SLFSRV_MENU_90&IsFolder=true')
+    await page.waitForSelector('a#fldra_FX_STUDENT_SLFSRV_MENU_90')
+    studentselfsrv = await page.querySelector('a#fldra_FX_STUDENT_SLFSRV_MENU_90')
+    await studentselfsrv.click()
+    #await page.waitForSelector('#DERIVED_SSS_SCR_SSS_LINK_ANCHOR4')
+    await page.waitForNavigation({ 'waitUntil': 'networkidle0', 'timeout': '0'})
+
+    student_center_links = await page.querySelectorAll('a.PSHYPERLINK')
+    student_center_link_names = []
+    for link in student_center_links:
+        link_text = await link.getProperty('textContent')
+        link_name = await link_text.jsonValue()
+        student_center_link_names.append(link_name)
+        print(link_name)
+    
+    await page.screenshot({'path': "./screenshot.png", 'fullPage': 'true'})
+
+    print("Closing browser.")
+    await browser.close()
+
+    print("Exporting links to Word document file.")
+    await exportLinksToDocument(links, "myUCF_Homepage")
+    await exportTextToDocument(student_center_link_names, "myUCF_Student_Center_Links")
+    
 
 asyncio.get_event_loop().run_until_complete(main())
