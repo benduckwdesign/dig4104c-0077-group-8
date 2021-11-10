@@ -7,3 +7,13 @@
 [Wed Nov 10 14:01:34.487992 2021] [ssl:warn] [pid 34456:tid 596] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Wed Nov 10 14:01:34.520255 2021] [ssl:warn] [pid 34456:tid 596] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Wed Nov 10 14:01:34.539272 2021] [mpm_winnt:notice] [pid 34456:tid 596] AH00354: Child: Starting 150 worker threads.
+[Wed Nov 10 14:21:23.192846 2021] [ssl:warn] [pid 34388:tid 568] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 10 14:21:23.227627 2021] [core:warn] [pid 34388:tid 568] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 10 14:21:23.228627 2021] [ssl:warn] [pid 34388:tid 568] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 10 14:21:23.247626 2021] [mpm_winnt:notice] [pid 34388:tid 568] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Wed Nov 10 14:21:23.247626 2021] [mpm_winnt:notice] [pid 34388:tid 568] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Wed Nov 10 14:21:23.247626 2021] [core:notice] [pid 34388:tid 568] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Wed Nov 10 14:21:23.250625 2021] [mpm_winnt:notice] [pid 34388:tid 568] AH00418: Parent: Created child process 5684
+[Wed Nov 10 14:21:23.529903 2021] [ssl:warn] [pid 5684:tid 628] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 10 14:21:23.563903 2021] [ssl:warn] [pid 5684:tid 628] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Nov 10 14:21:23.583903 2021] [mpm_winnt:notice] [pid 5684:tid 628] AH00354: Child: Starting 150 worker threads.
