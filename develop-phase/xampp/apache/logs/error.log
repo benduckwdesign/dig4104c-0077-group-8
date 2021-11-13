@@ -17,3 +17,30 @@
 [Wed Nov 10 14:21:23.529903 2021] [ssl:warn] [pid 5684:tid 628] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Wed Nov 10 14:21:23.563903 2021] [ssl:warn] [pid 5684:tid 628] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Wed Nov 10 14:21:23.583903 2021] [mpm_winnt:notice] [pid 5684:tid 628] AH00354: Child: Starting 150 worker threads.
+[Fri Nov 12 20:37:16.729821 2021] [ssl:warn] [pid 19904:tid 512] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:37:16.767819 2021] [core:warn] [pid 19904:tid 512] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 12 20:37:16.769821 2021] [ssl:warn] [pid 19904:tid 512] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:37:16.816819 2021] [mpm_winnt:notice] [pid 19904:tid 512] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Fri Nov 12 20:37:16.816819 2021] [mpm_winnt:notice] [pid 19904:tid 512] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Fri Nov 12 20:37:16.816819 2021] [core:notice] [pid 19904:tid 512] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Fri Nov 12 20:37:16.819819 2021] [mpm_winnt:notice] [pid 19904:tid 512] AH00418: Parent: Created child process 24164
+[Fri Nov 12 20:37:17.109819 2021] [ssl:warn] [pid 24164:tid 576] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:37:17.143835 2021] [ssl:warn] [pid 24164:tid 576] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:37:17.162835 2021] [mpm_winnt:notice] [pid 24164:tid 576] AH00354: Child: Starting 150 worker threads.
+[Fri Nov 12 20:37:36.124278 2021] [php7:error] [pid 24164:tid 1860] [client 127.0.0.1:59657] script 'C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/htdocs/database_init.php' not found or unable to stat
+[Fri Nov 12 20:37:39.392830 2021] [php7:error] [pid 24164:tid 1860] [client 127.0.0.1:59657] script 'C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/htdocs/database_init.php' not found or unable to stat
+[Fri Nov 12 20:37:58.540877 2021] [php7:warn] [pid 24164:tid 1860] [client 127.0.0.1:59669] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\\Users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\htdocs\\MyUCFDashboard\\database_init.php on line 7
+[Fri Nov 12 20:38:50.798017 2021] [php7:warn] [pid 24164:tid 1860] [client 127.0.0.1:59690] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\\Users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\htdocs\\MyUCFDashboard\\database_init.php on line 7
+[Fri Nov 12 20:38:51.729993 2021] [php7:warn] [pid 24164:tid 1860] [client 127.0.0.1:59690] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in C:\\Users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\htdocs\\MyUCFDashboard\\database_init.php on line 7
+[Fri Nov 12 20:40:10.457851 2021] [mpm_winnt:crit] [pid 24164:tid 576] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Fri Nov 12 20:40:11.610196 2021] [ssl:warn] [pid 33288:tid 132] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:40:11.645196 2021] [core:warn] [pid 33288:tid 132] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 12 20:40:11.646196 2021] [ssl:warn] [pid 33288:tid 132] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:40:11.664195 2021] [mpm_winnt:notice] [pid 33288:tid 132] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Fri Nov 12 20:40:11.664195 2021] [mpm_winnt:notice] [pid 33288:tid 132] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Fri Nov 12 20:40:11.664195 2021] [core:notice] [pid 33288:tid 132] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Fri Nov 12 20:40:11.668197 2021] [mpm_winnt:notice] [pid 33288:tid 132] AH00418: Parent: Created child process 33760
+[Fri Nov 12 20:40:11.948203 2021] [ssl:warn] [pid 33760:tid 600] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:40:11.982847 2021] [ssl:warn] [pid 33760:tid 600] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:40:12.001848 2021] [mpm_winnt:notice] [pid 33760:tid 600] AH00354: Child: Starting 150 worker threads.
+[Fri Nov 12 20:48:04.434905 2021] [mpm_winnt:crit] [pid 33760:tid 600] AH02538: Child: Parent process exited abruptly. Child process is ending
