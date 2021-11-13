@@ -44,3 +44,14 @@
 [Fri Nov 12 20:40:11.982847 2021] [ssl:warn] [pid 33760:tid 600] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Nov 12 20:40:12.001848 2021] [mpm_winnt:notice] [pid 33760:tid 600] AH00354: Child: Starting 150 worker threads.
 [Fri Nov 12 20:48:04.434905 2021] [mpm_winnt:crit] [pid 33760:tid 600] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Fri Nov 12 20:51:57.611979 2021] [ssl:warn] [pid 20152:tid 560] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:51:57.646979 2021] [core:warn] [pid 20152:tid 560] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 12 20:51:57.648979 2021] [ssl:warn] [pid 20152:tid 560] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:51:57.666980 2021] [mpm_winnt:notice] [pid 20152:tid 560] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Fri Nov 12 20:51:57.666980 2021] [mpm_winnt:notice] [pid 20152:tid 560] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Fri Nov 12 20:51:57.666980 2021] [core:notice] [pid 20152:tid 560] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Fri Nov 12 20:51:57.670979 2021] [mpm_winnt:notice] [pid 20152:tid 560] AH00418: Parent: Created child process 13604
+[Fri Nov 12 20:51:57.958980 2021] [ssl:warn] [pid 13604:tid 608] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:51:57.993852 2021] [ssl:warn] [pid 13604:tid 608] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Nov 12 20:51:58.012853 2021] [mpm_winnt:notice] [pid 13604:tid 608] AH00354: Child: Starting 150 worker threads.
+[Fri Nov 12 20:56:15.824854 2021] [mpm_winnt:crit] [pid 13604:tid 608] AH02538: Child: Parent process exited abruptly. Child process is ending
