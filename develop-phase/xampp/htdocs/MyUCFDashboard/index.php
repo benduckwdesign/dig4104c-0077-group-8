@@ -62,9 +62,12 @@ $page_elements = [
             "<h1 style=\"line-height:1;\">Student Center</h1>"
         ),
         new FlexRow(
-            new ExpandedCard(
-                "Academics", "See More", ""
-            )
+            new ExpandedCard("Academics", "See More", ""),
+            new ExpandedCard("Finances", "Finances", ""),
+            new ExpandedCard("Housing", "Housing", ""),
+            new ExpandedCard("Calendar", "See Events", ""),
+            new ExpandedCard("Knights Email", "See More", ""),
+            new ExpandedCard("Quick Links", "See All", "")
         )
     ),
     "</div>"
