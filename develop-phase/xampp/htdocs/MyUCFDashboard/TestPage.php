@@ -1,4 +1,12 @@
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="./base.css" id="pagestyle"><title>UCF Student Center</title><meta name="og:title" content="UCF Student Center"><meta name="twitter:title" content="UCF Student Center"><meta name="description" content="UCF Student Center prototype for DIG4104."><meta name="og:description" content="UCF Student Center prototype for DIG4104."><meta name="author" content="Benjamin Duckworth"><style>
+<?php
+include_once "backend/queryUserDarkMode.php";
+if (queryUserDarkMode("guest") == "on") {
+    $css_file = 'dark.css';
+} else {
+    $css_file = 'base.css';
+}
+?>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="./<?=$css_file?>" id="pagestyle"><title>UCF Student Center</title><meta name="og:title" content="UCF Student Center"><meta name="twitter:title" content="UCF Student Center"><meta name="description" content="UCF Student Center prototype for DIG4104."><meta name="og:description" content="UCF Student Center prototype for DIG4104."><meta name="author" content="Benjamin Duckworth"><style>
 .b-0a { display:flex;min-height:100vh;flex-direction:column; }
 .b-0b { float:left;position:sticky;top:0;width:200px;min-height:100vh;align-items:center;color:#e1e1e1; }
 .b-0c { background-color:rgba(0,0,0,0.2); }
@@ -36,11 +44,24 @@ $path = ["bd-kit","components","MainContent.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 $path = ["bd-kit","components","NavSidebar.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
+$path = ["bd-kit","components","FlexRow.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
+$path = ["bd-kit","components","ExpandedCard.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
 
 $page_elements = [
     "<div>",
     new NavSidebar(),
-    new MainContent(),
+    new MainContent(
+        new FlexRow(
+            "<h1 style=\"line-height:1;\">Student Center</h1>"
+        ),
+        new FlexRow(
+            new ExpandedCard(
+                "Academics", "See More", ""
+            )
+        )
+    ),
     "</div>"
 ];
 
