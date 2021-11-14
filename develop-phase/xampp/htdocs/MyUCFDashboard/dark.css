@@ -108,3 +108,9 @@ border-radius: 34px;
 .slider.round:before {
 border-radius: 50%;
 }
+.smallbuttonwithicon {
+text-decoration:none;font-family:'Lato',sans-serif;color:#e1e1e1;border:none;font-weight:bold;margin:3px 5px;padding:5px 20px;background-color:#000;font-size:18pt;border-radius:999px;
+}
+.smallbuttonwithicon:hover {
+outline:4px solid;animation:outline-color-cycle-l-d 2s infinite;
+}
