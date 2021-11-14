@@ -5,7 +5,7 @@ class BDComponent {
     private $child_html;
     public $children;
 
-    function make_html($page) {
+    function make_html() {
 
         $this->child_html = "";
 
@@ -15,7 +15,7 @@ class BDComponent {
                 $this->child_html = $child_html . $this->$children[$i];
             } else {
                 if (is_subclass_of($children[$i], 'BDComponent') == TRUE) {
-                    $this->child_html = $child_html . $this->$children[$i]->make_html($page);
+                    $this->child_html = $child_html . $this->$children[$i]->make_html();
                 } else {
                     error_log("BDComponent: Child in component children is not of class component or string.", 3, "./errors.log");
                     die();
