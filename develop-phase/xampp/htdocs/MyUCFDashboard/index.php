@@ -48,11 +48,16 @@ $path = ["bd-kit","components","FlexRow.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 $path = ["bd-kit","components","ExpandedCard.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
+$path = ["bd-kit","components","VSpacer.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
 
 $page_elements = [
     "<div>",
     new NavSidebar(),
     new MainContent(
+        new FlexRow(
+            new VSpacer("20px")
+        ),
         new FlexRow(
             "<h1 style=\"line-height:1;\">Student Center</h1>"
         ),
