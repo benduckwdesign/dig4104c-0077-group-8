@@ -15,9 +15,10 @@ class BDComponent {
                 $this->child_html = $this->child_html . $this->children[$i];
             } else {
                 if (is_subclass_of($this->children[$i], 'BDComponent') == TRUE) {
-                    $this->child_html = $child_html . $this->children[$i]->make_html();
+                    $this->child_html = $this->child_html . $this->children[$i]->make_html();
                 } else {
-                    error_log("BDComponent: Child in component children is not of class component or string.", 3, "./errors.log");
+                    echo print_r($this->children[$i]);
+                    error_log("BDComponent: Child of type " . get_class($this->children[$i]) . " in component children is not of class component or string.\n", 3, "./errors.log");
                     die();
                 }
             }

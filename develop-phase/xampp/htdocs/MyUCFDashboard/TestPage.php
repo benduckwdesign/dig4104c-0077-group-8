@@ -4,7 +4,10 @@ $path = ["bd-kit","components","PageWrapper.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 
 $page_elements = [
-    new PageWrapper(["This is additional text."])
+    new PageWrapper(
+        "This is additional text.",
+        new PageWrapper()
+    )
 ];
 
 $child_html = "";
