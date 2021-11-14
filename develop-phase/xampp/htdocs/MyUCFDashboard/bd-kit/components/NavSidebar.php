@@ -2,24 +2,33 @@
 
 $path = ["bd-kit","Component.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
-$path = ["backend","ThemeColors.php"];
+$path = ["bd-kit","components","NavSidebarWrapper.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
+$path = ["bd-kit","components","VSpacer.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
+$path = ["bd-kit","components","SmallButtonWithIcon.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 
 class NavSidebar extends BDComponent {
 
     function __construct() {
-        GLOBAL $TEXT_COLOR;
-        GLOBAL $BACKGROUND_COLOR;
-        GLOBAL $TRANSPARENT_BG_COLOR;
 
-        $arg_children = func_get_args();
-        $this->children = ["<div style=\"float:left;position:sticky;top:0;width:200px;min-height:100vh;align-items:center;color:".$TEXT_COLOR.";background-color:".$TRANSPARENT_BG_COLOR.";\">", "</div>"];
-        if (count($arg_children) == 0) {
-            return;
-        } else {
-            $this->children = [$this->children[0], ...$arg_children, $this->children[1]];
-            return;
-        }
+        $this->children = [
+            new NavSidebarWrapper(
+                "<div style=\"top:0;position:absolute;\">",
+                    new VSpacer("20px"),
+                    new SmallButtonWithIcon("Profile", "./profile.php", "fa-user-circle"),
+                    new VSpacer("20px"),
+                    new SmallButtonWithIcon("Home", "./index.php", "fa-home"),
+                    new VSpacer("20px"),
+                "</div>",
+                "<div style=\"bottom:0;position:absolute;\">",
+                    new SmallButtonWithIcon("Settings", "./settings.php", "fa-cog"),
+                    new VSpacer("20px"),
+                "</div>"
+            )
+        ];
+        return;
     }
 
 }
