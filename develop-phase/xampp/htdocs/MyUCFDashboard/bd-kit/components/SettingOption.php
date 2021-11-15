@@ -9,7 +9,7 @@ class SettingOption extends BDComponent {
 
         $arg_children = func_get_args();
         $title_string = array_shift($arg_children);
-        $this->children = ["<div style=\"margin-left:10px;margin-bottom:10px;width:100%;\">",
+        $this->children = ["<div style=\"margin-left:10px;margin-bottom:10px;width:100%;display:inherit;\">",
                                 "<span style=\"margin-right:10px;\">",
                                     $title_string,
                                 "</span>",

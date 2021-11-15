@@ -197,3 +197,13 @@
 [Mon Nov 15 16:06:10.173634 2021] [ssl:warn] [pid 11188:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Mon Nov 15 16:06:10.209634 2021] [ssl:warn] [pid 11188:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Mon Nov 15 16:06:10.230634 2021] [mpm_winnt:notice] [pid 11188:tid 616] AH00354: Child: Starting 150 worker threads.
+[Mon Nov 15 17:03:27.508128 2021] [ssl:warn] [pid 45372:tid 164] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 17:03:27.546127 2021] [core:warn] [pid 45372:tid 164] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 15 17:03:27.548126 2021] [ssl:warn] [pid 45372:tid 164] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 17:03:27.567127 2021] [mpm_winnt:notice] [pid 45372:tid 164] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Mon Nov 15 17:03:27.567127 2021] [mpm_winnt:notice] [pid 45372:tid 164] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Mon Nov 15 17:03:27.567127 2021] [core:notice] [pid 45372:tid 164] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Mon Nov 15 17:03:27.571128 2021] [mpm_winnt:notice] [pid 45372:tid 164] AH00418: Parent: Created child process 3556
+[Mon Nov 15 17:03:27.859674 2021] [ssl:warn] [pid 3556:tid 612] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 17:03:27.894675 2021] [ssl:warn] [pid 3556:tid 612] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 17:03:27.913673 2021] [mpm_winnt:notice] [pid 3556:tid 612] AH00354: Child: Starting 150 worker threads.
