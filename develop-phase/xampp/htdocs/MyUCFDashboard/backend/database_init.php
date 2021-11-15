@@ -22,6 +22,5 @@ if ($result == 1) {
     echo("Could not create settings table, or it already exists.\n");
 }
 
-
 $conn->close();
 ?> 

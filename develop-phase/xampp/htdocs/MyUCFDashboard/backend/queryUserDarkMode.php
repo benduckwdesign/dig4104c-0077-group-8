@@ -17,7 +17,7 @@ function queryUserDarkMode($USER) {
           $value = $row["value"];
         }
     } else {
-        //no results
+        $value = "off";
     }
     $conn->close();
 

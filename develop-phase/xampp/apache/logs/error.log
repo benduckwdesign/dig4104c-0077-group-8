@@ -187,3 +187,13 @@
 [Sun Nov 14 01:19:29.803688 2021] [ssl:warn] [pid 13656:tid 588] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Sun Nov 14 01:19:29.822688 2021] [mpm_winnt:notice] [pid 13656:tid 588] AH00354: Child: Starting 150 worker threads.
 [Sun Nov 14 01:57:00.670747 2021] [php7:error] [pid 13656:tid 1844] [client 127.0.0.1:57229] PHP Fatal error:  Uncaught Error: Class 'FlexRow' not found in C:\\Users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\htdocs\\MyUCFDashboard\\burnstest.php:24\nStack trace:\n#0 {main}\n  thrown in C:\\Users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\htdocs\\MyUCFDashboard\\burnstest.php on line 24
+[Mon Nov 15 16:06:09.811633 2021] [ssl:warn] [pid 33508:tid 576] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 16:06:09.852634 2021] [core:warn] [pid 33508:tid 576] AH00098: pid file C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 15 16:06:09.854634 2021] [ssl:warn] [pid 33508:tid 576] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 16:06:09.878634 2021] [mpm_winnt:notice] [pid 33508:tid 576] AH00455: Apache/2.4.51 (Win64) OpenSSL/1.1.1l PHP/7.4.25 configured -- resuming normal operations
+[Mon Nov 15 16:06:09.878634 2021] [mpm_winnt:notice] [pid 33508:tid 576] AH00456: Apache Lounge VC15 Server built: Oct  8 2021 10:03:59
+[Mon Nov 15 16:06:09.878634 2021] [core:notice] [pid 33508:tid 576] AH00094: Command line: 'c:\\users\\miniluigi\\ucfgithubproject\\dig4104c-0077-group-8\\develop-phase\\xampp\\apache\\bin\\httpd.exe -d C:/Users/miniluigi/ucfgithubproject/dig4104c-0077-group-8/develop-phase/xampp/apache'
+[Mon Nov 15 16:06:09.882634 2021] [mpm_winnt:notice] [pid 33508:tid 576] AH00418: Parent: Created child process 11188
+[Mon Nov 15 16:06:10.173634 2021] [ssl:warn] [pid 11188:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 16:06:10.209634 2021] [ssl:warn] [pid 11188:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 15 16:06:10.230634 2021] [mpm_winnt:notice] [pid 11188:tid 616] AH00354: Child: Starting 150 worker threads.

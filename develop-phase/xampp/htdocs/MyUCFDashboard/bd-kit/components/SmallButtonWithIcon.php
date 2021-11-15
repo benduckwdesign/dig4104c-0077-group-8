@@ -18,12 +18,7 @@ class SmallButtonWithIcon extends BDComponent {
                                     $title_string,
                                 "</a>",
                            "</div>"];
-        if (count($arg_children) == 0) {
-            return;
-        } else {
-            $this->children = [$this->children[0], ...$arg_children, $this->children[1]];
-            return;
-        }
+        return;
     }
 
 }
