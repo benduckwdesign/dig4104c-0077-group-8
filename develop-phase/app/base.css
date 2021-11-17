@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+* {margin:0;padding:0;}
+:root {font-size:18px;font-family:'Lato',sans-serif;line-height:175%;}
+/* convert size to rem */
+body {background:#222;}
+h1,h2,h3,h4,h5 { margin-left:10px; }
+h1,h2,h3 {font-family:'Arvo',serif;line-height:2.25rem;z-index:0;position:relative;}
+h4,h5,h6 {font-family:'Gotham',serif;line-height:2.25rem;}
+h1 {font-size:42pt;font-weight:500;}
+h2 {font-size:30pt;font-weight:500;}
+h3 {font-size:24pt;}
+h4 {font-size:20pt;font-weight:600;}
+h5 {font-size:18pt;font-weight:600;}
+h6 {font-size:18pt;font-weight:500;}
+form { max-width:500px;padding:20px 30px 20px 30px;background:rgba(255,255,255,0.2);margin:10px auto;border-radius:10px;font-family:'Arvo',serif; }
+fieldset { border:none; }
+legend { margin-bottom:20px;margin-top:10px;font-family:'Lato',sans-serif;font-weight:500; }
+label { display:block;margin-bottom:4px;font-size:20px;font-family:'Lato',sans-serif;font-weight:500; }
+textarea { min-height:150px; }
+input[type="text"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="time"], .input[type="url"], textarea, select { border:none;border-radius:10px;font-size:18px;margin:0;outline:0;padding:15px;width:100%;box-sizing:border-box;font-family:'Arvo',serif;background:rgba(255,255,255,0.2);color:#000;margin-bottom:30px; }
+input[type="text"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus, select:focus{ background:rgba(255,255,255,0.1); }
+select { -webkit-appearance:menulist-button;height:35px; }
+button[type="submit"], input[type="button"] {
+    position:relative;display:block;padding:12px 32px 12px 32px;color:#000;margin:0 auto;background:rgba(255,255,255,0.75);font-size:18px;border:none;text-align:center;width:100%;margin-bottom:10px;border-radius:999px;font-family:'Lato',sans-serif;font-weight:bold; }
+:focus, button:hover, input:hover, button:focus, input:focus, textarea:hover, textarea:focus { outline:4px solid;animation:outline-color-cycle-l-d 2s infinite; }
+@keyframes outline-color-cycle-l-d { 0% {outline-color: #54CFF8} 50% {outline-color: #333} 100% {outline-color: #54CFF8} }
+a, span { text-decoration:none;color:inherit; }
+a {text-decoration: underline;}
+h1::after {
+    background-color:#FFF;
+    background-image:-webkit-linear-gradient(#F7CB46,#F7CB46);
+    background-image:linear-gradient(#F7CB46,#F7CB46);
+    content:'';
+    display:block;
+    height:20px;
+    bottom:20px;
+    position:relative;
+    width:100%;
+    z-index:-1;
+}
+h2::after {
+    background-color:#FFF;
+    background-image:-webkit-linear-gradient(#F7CB46,#F7CB46);
+    background-image:linear-gradient(#F7CB46,#F7CB46);
+    content:'';
+    display:block;
+    height:10px;
+    bottom:10px;
+    position:relative;
+    width:100%;
+    z-index:-1;
+}
+mark {
+    background-color: #c0efff;
+    padding: 0px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+    margin-left: -15px;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgb(255,255,255);
+-webkit-transition: .4s;
+transition: .4s;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: rgba(0,0,0,0.4);
+-webkit-transition: .4s;
+transition: .4s;
+}
+input:checked + .slider {
+background-color: #54CFF8;
+}
+input:focus + .slider {
+box-shadow: 0 0 1px #54CFF8;
+}
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+.slider.round {
+border-radius: 34px;
+}
+.slider.round:before {
+border-radius: 50%;
+}
+.smallbuttonwithicon {
+text-decoration:none;font-family:'Lato',sans-serif;color:#252525;border:none;font-weight:bold;margin:3px 5px;padding:5px 20px;background-color:#FFF;font-size:18pt;border-radius:999px;
+}
+.smallbuttonwithicon:hover {
+outline:4px solid;animation:outline-color-cycle-l-d 2s infinite;
+}
