@@ -1,8 +1,8 @@
 <?php
 
-$path = ["bd-kit","Component.php"];
+$path = [__DIR__,"..","Component.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
-$path = ["backend","ThemeColors.php"];
+$path = [__DIR__,"..","..","backend","ThemeColors.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 
 class ExpandedCard extends BDComponent {

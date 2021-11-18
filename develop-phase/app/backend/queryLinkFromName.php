@@ -1,20 +1,21 @@
 <?php
 
-function queryUserDarkMode($USER) {
+function queryLinkFromName($NAME) {
     $path = [__DIR__,"getDatabaseConnection.php"];
     include_once(join(DIRECTORY_SEPARATOR, $path));
 
     $conn = getDatabaseConnection();
 
-    $sql = "SELECT `id`, `setting`, `belongs_to`, `value` FROM `preferences` WHERE belongs_to='$USER' AND setting='darkmode';";
+    $sql = "SELECT `id`, `name`, `url` FROM `urls` WHERE `name`='$NAME';";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-          $value = $row["value"];
+          $value = $row["url"];
         }
     } else {
-        $value = "off";
+        include("config.php");
+        $value = $siteroot."404";
     }
     $conn->close();
 

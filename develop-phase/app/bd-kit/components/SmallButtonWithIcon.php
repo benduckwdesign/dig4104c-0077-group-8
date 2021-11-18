@@ -1,6 +1,6 @@
 <?php
 
-$path = ["bd-kit","Component.php"];
+$path = [__DIR__,"..","Component.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 
 class SmallButtonWithIcon extends BDComponent {

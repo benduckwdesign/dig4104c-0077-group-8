@@ -1,6 +1,6 @@
 <?php
 
-$path = ["backend","ThemeColors.php"];
+$path = [__DIR__,"..","..","backend","ThemeColors.php"];
 include_once(join(DIRECTORY_SEPARATOR, $path));
 
 class ProfileImageCircle extends BDComponent {

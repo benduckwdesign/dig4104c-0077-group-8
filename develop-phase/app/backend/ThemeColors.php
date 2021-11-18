@@ -1,5 +1,7 @@
 <?php
-include_once "backend/queryUserDarkMode.php";
+
+$path = [__DIR__,".","queryUserDarkMode.php"];
+include_once(join(DIRECTORY_SEPARATOR, $path));
 
 if (queryUserDarkMode("guest") == "on") {
     GLOBAL $TEXT_COLOR;

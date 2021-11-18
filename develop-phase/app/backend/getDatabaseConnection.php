@@ -3,10 +3,7 @@
 function getDatabaseConnection() {
     // echo "Trying to connect to MySQL...\n";
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "dig4104c";
-    $database_name = "my_ucf_database";
+    include("db_config.php");
 
     // Create connection
     $conn = new mysqli($servername, $username, $password);
