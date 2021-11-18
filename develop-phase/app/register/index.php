@@ -46,8 +46,8 @@ $registerform = <<<END
 <input type="text" placeholder="What should we call you?" name = "nn" required />
 <label><b>Password</b></label>
 <input type="password" placeholder="Enter a password." name = "nn" required />
-<label><b>Email Address</b></label>
-<input type="text" placeholder="Enter your email address." name = "email" />
+<label><b>UCF Email Address</b></label>
+<input type="text" placeholder="Enter your UCF email address." name = "email" />
 <label><b>UCF ID Number</b></label>
 <input type="text" placeholder="Enter your UCF ID number." name = "ucfid" />
 <input type="button" value="Sign Up" />
@@ -74,8 +74,8 @@ $page_elements = [
             "<h1 style=\"line-height:1;\">Sign Up</h1>"
         ),
         new FlexRow(
-          "<h3 style=\"width:100%;text-align:center;\">Welcome to UCF!</h3>",
-          "<h4 style=\"width:100%;text-align:center;\">Please use the form below to register.</h4>",
+          "<h3 style=\"width:100%;text-align:center;margin:0;\">Welcome to UCF!</h3>",
+          "<h4 style=\"width:100%;text-align:center;margin:0;\">Please use the form below to register.</h4>",
         ),
         new FlexRow(
             "$registerform",
