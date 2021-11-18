@@ -36,7 +36,6 @@ while ($a < count($included_components)) {
 }
 
 $page_elements = [
-    "<div>",
     new NavSidebar($folder_to_root),
     new MainContent(
         new FlexRow(
@@ -49,7 +48,6 @@ $page_elements = [
             new TextBlock("The URL for that resource was not found in the database. You can click the back button in your browser to return to the previous page, or click one of the sidebar navigation links to go to a different page.")
         )
     ),
-    "</div>"
 ];
 
 

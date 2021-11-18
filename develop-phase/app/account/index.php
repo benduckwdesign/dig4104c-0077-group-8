@@ -34,7 +34,6 @@ while ($a < count($included_components)) {
 }
 
 $page_elements = [
-    "<div>",
     new NavSidebar(),
     new MainContent(
         new FlexRow(
@@ -57,7 +56,6 @@ $page_elements = [
             new TextBlock("Emergency Contact<br>"),
         )
     ),
-    "</div>"
 ];
 
 

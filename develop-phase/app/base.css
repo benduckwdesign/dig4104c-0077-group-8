@@ -3,7 +3,7 @@
 * {margin:0;padding:0;}
 :root {font-size:18px;font-family:'Lato',sans-serif;line-height:175%;}
 /* convert size to rem */
-body {background:#222;}
+body {background:#e1e1e1;}
 h1,h2,h3,h4,h5 { margin-left:10px; }
 h1,h2,h3 {font-family:'Arvo',serif;line-height:2.25rem;z-index:0;position:relative;}
 h4,h5,h6 {font-family:'Gotham',serif;line-height:2.25rem;}

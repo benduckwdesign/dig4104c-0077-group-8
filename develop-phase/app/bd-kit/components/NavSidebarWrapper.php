@@ -13,7 +13,7 @@ class NavSidebarWrapper extends BDComponent {
         GLOBAL $TRANSPARENT_BG_COLOR;
 
         $arg_children = func_get_args();
-        $this->children = ["<div style=\"float:left;position:sticky;top:0;width:200px;min-height:100vh;align-items:center;color:".$TEXT_COLOR.";background-color:".$TRANSPARENT_BG_COLOR.";\">", "</div>"];
+        $this->children = ["<div style=\"float:left;position:absolute;top:0;width:200px;min-height:100vh;align-items:center;color:".$TEXT_COLOR.";background-color:".$TRANSPARENT_BG_COLOR.";\">", "</div>"];
         if (count($arg_children) == 0) {
             return;
         } else {

@@ -43,7 +43,6 @@ $expectedgraduationdate = "N/A";
 $beenastudentsince = date("Y");
 
 $page_elements = [
-    "<div>",
     new NavSidebar($folder_to_root),
     new MainContent(
         new FlexRow(
@@ -66,7 +65,6 @@ $page_elements = [
             new ExpandedCard("Quick Links", "See All", "")
         )
     ),
-    "</div>"
 ];
 
 

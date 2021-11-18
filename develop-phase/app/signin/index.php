@@ -23,6 +23,7 @@ if (queryUserDarkMode("guest") == "on") {
 <?php
 
 include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."fonts.php");
+include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."queryLinkFromName.php");
 
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
@@ -40,17 +41,11 @@ while ($a < count($included_components)) {
 $msg = "";
 $registerform = <<<END
 <form style="width:100%;" method="post" enctype="multipart/form-data" action=?#?>
-<label><b>Full Name</b></label>
-<input type="text" placeholder="Enter your full name." name = "fn" required />
-<label><b>Nickname</b></label>
-<input type="text" placeholder="What should we call you?" name = "nn" required />
-<label><b>Password</b></label>
-<input type="password" placeholder="Enter a password." name = "nn" required />
 <label><b>UCF Email Address</b></label>
-<input type="text" placeholder="Enter your UCF email address." name = "email" />
-<label><b>UCF ID Number</b></label>
-<input type="text" placeholder="Enter your UCF ID number." name = "ucfid" />
-<input type="button" value="Sign Up" />
+<input type="text" placeholder="Enter your UCF Email Address." name = "email" required />
+<label><b>Password</b></label>
+<input type="password" placeholder="Enter your password." name = "nn" required />
+<input type="button" value="Sign In" />
 </form>
 END;
 
@@ -58,34 +53,50 @@ $page_elements = [
     new NavSidebar($folder_to_root),
     new MainContent(
         new FlexRow(
+        "<div style=\"max-height:160px;overflow:hidden;\"><picture id=\"header-picture\" style=\"header-picture\">
+            <source srcset=\"https://www.ucf.edu/files/2021/03/myucf-login-bg-millicanhall-1600x550-opt.jpeg\" media=\"(min-width: 992px)\" id=\"header-picture-source-lg\">
+            <source srcset=\"https://www.ucf.edu/files/2021/03/myucf-login-bg-MillicanHall-medium-991x270-opt.jpg\" media=\"(min-width: 768px)\" id=\"header-picture-source-md\">
+            <source srcset=\"https://www.ucf.edu/files/2021/03/myucf-login-bg-MillicanHall-small-767x270-opt.jpg\" media=\"(min-width: 576px)\" id=\"header-picture-source-sm\">
+            <source srcset=\"https://www.ucf.edu/files/2021/03/myucf-login-bg-MillicanHall-575x270-opt.jpg\" media=\"(max-width: 575px)\" id=\"header-picture-source-xs\">
+            <img class=\"header-picture-img object-fit-cover\" id=\"header-picture-source-fallback\" src=\"https://www.ucf.edu/files/2021/03/myucf-login-bg-millicanhall-1600x550-opt.jpeg\" alt=\"\" data-object-fit=\"cover\">
+        </picture></div>"
+        ),
+        new FlexRow(
             new VSpacer("20px")
         ),
         new FlexRow(
-            "<h1 style=\"line-height:1;\">Sign Up</h1>"
+            "<h1 style=\"line-height:1;\">Sign In</h1>"
         ),
-        new VSpacer("25px"),
+        new VSpacer("50px"),
         new FlexRow(
-          "<h3 style=\"width:100%;text-align:center;margin:0;\">Welcome to UCF!</h3>",
-          "<h4 style=\"width:100%;text-align:center;margin:0;\">Please use the form below to register.</h4>",
+            "<h3 style=\"width:100%;text-align:center;margin:0;\">Welcome back!</h3>",
+            "<h4 style=\"width:100%;text-align:center;margin:0;\">Please use the form below to log in.</h4>",
         ),
-        new VSpacer("25px"),
+        new VSpacer("50px"),
         new FlexRow(
             "$registerform",
         ),
-        new VSpacer("25px"),
+        new VSpacer("50px"),
         new FlexRow(
-            "<p style=\"width:100%;text-align:center;margin:0;\">Already have an account?</p>",
-            "<div style=\"margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;\">",
-                new SmallButton("Sign In",queryLinkFromName("Sign In")),
-            "</div>",
+            "<p style=\"width:100%;text-align:center;margin:0;\">Don't have an account?</p>",
         ),
         new VSpacer("10px"),
         new FlexRow(
+            "<div style=\"margin-left:auto;margin-right:auto;\">",
+                new SmallButton("Sign Up",queryLinkFromName("Sign Up")),
+            "</div>",
+        ),
+        new VSpacer("20px"),
+        new FlexRow(
             "<p style=\"width:100%;text-align:center;margin:0;\">Forgot your password?</p>",
-            "<div style=\"margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:10px;\">",
+        ),
+        new VSpacer("10px"),
+        new FlexRow(
+            "<div style=\"margin-left:auto;margin-right:auto;\">",
                 new SmallButton("Reset Password",queryLinkFromName("Reset Password")),
             "</div>",
-        ), 
+        ),
+        new VSpacer("50px"),
     ),
 ];
 

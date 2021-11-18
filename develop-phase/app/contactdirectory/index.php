@@ -37,7 +37,6 @@ while ($a < count($included_components)) {
 }
 
 $page_elements = [
-    "<div>",
     new NavSidebar($folder_to_root),
     new MainContent(
         new FlexRow(
@@ -51,7 +50,6 @@ $page_elements = [
             "<iframe style=\"width:100%;height:100%;\" src=\"https://www.ucf.edu/phonebook/\" title=\"Contact Information\"></iframe> "
         )
     ),
-    "</div>"
 ];
 
 

@@ -33,6 +33,7 @@ if ($result == 1) {
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Social Media Directory', '".$siteroot."socialmediadirectory/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Contact Directory', '".$siteroot."contactdirectory/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Donate to UCF', 'https://www.ucf.edu/alumni-giving/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Sign Up', '".$siteroot."register/') ",
     ];
 
     $b = 0;
