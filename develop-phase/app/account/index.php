@@ -1,5 +1,4 @@
 <?php
-
 $ds = DIRECTORY_SEPARATOR;
 
 // Set path to site root relative to current file for serving CSS.
@@ -17,14 +16,13 @@ if (queryUserDarkMode("guest") == "on") {
     $css_file = $folder_to_root.'/base.css';
 }
 
-// Send HTML head.
 ?>
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="<?=$folder_to_root?>/font-awesome-4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="<?=$css_file?>" id="pagestyle"><title>UCF Student Center</title><meta name="og:title" content="UCF Student Center"><meta name="twitter:title" content="UCF Student Center"><meta name="description" content="UCF Student Center prototype for DIG4104."><meta name="og:description" content="UCF Student Center prototype for DIG4104."><meta name="author" content="Benjamin Duckworth"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="./<?=$css_file?>" id="pagestyle"><title>UCF Student Center</title><meta name="og:title" content="UCF Student Center"><meta name="twitter:title" content="UCF Student Center"><meta name="description" content="UCF Student Center prototype for DIG4104."><meta name="og:description" content="UCF Student Center prototype for DIG4104."><meta name="author" content="Benjamin Duckworth"></head>
 <?php
 
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
-$included_components = ["PageWrapper", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "TextBlock"];
+$included_components = ["ProfileImageCircle", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "TextBlock"];
 
 $a = 0;
 while ($a < count($included_components)) {
@@ -37,16 +35,26 @@ while ($a < count($included_components)) {
 
 $page_elements = [
     "<div>",
-    new NavSidebar($folder_to_root),
+    new NavSidebar(),
     new MainContent(
         new FlexRow(
             new VSpacer("20px")
         ),
         new FlexRow(
-            "<h1 style=\"line-height:1;\">Not Found</h1>"
+            "<h1 style=\"line-height:1;\">Personal Information</h1>"
         ),
         new FlexRow(
-            new TextBlock("The URL for that resource was not found in the database. You can click the back button in your browser to return to the previous page, or click one of the sidebar navigation links to go to a different page.")
+            new ProfileImageCircle(),
+        ),
+        new FlexRow(
+            new TextBlock("Profile Photo<br>"),
+            new TextBlock("Full Name<br>"),
+            new TextBlock("Pronouns<br>"),
+            new TextBlock("Address<br>"),
+            new TextBlock("Phone Number<br>"),
+            new TextBlock("Email Address<br>"),
+            new TextBlock("UCF ID<br>"),
+            new TextBlock("Emergency Contact<br>"),
         )
     ),
     "</div>"

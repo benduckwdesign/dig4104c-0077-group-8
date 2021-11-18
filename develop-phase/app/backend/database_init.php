@@ -26,9 +26,9 @@ if ($result == 1) {
     $result = $conn->query($sql);
 
     $urls = [
-        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Profile', '".$siteroot."profile.php') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Profile', '".$siteroot."account/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Home', '".$siteroot."home/') ",
-        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Settings', '".$siteroot."settings.php') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Settings', '".$siteroot."settings/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Employee Self Service', 'https://my.ucf.edu/psp/IHPROD/EMPLOYEE/EMPL/?cmd=login') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Social Media Directory', '".$siteroot."socialmediadirectory/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Contact Directory', '".$siteroot."contactdirectory/') ",
