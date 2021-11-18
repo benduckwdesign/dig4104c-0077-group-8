@@ -27,7 +27,9 @@ class NavSidebar extends BDComponent {
             new NavSidebarWrapper(
                 "<div style=\"top:0;position:absolute;\">",
                     "<img style=\"width:100%;height:auto;display:block;\" src=\"".$siteroot."images/tab300.png\">",
-                    new VSpacer("20px"),
+                    new VSpacer("5px"),
+                    "<p style=\"text-align:center;width:100%;display:inline-block;\"><b>STUDENT CENTER</b></p>",
+                    new VSpacer("8px"),
                     new SmallButtonWithIcon("Profile", queryLinkFromName("Profile"), "fa-user-circle"),
                     new VSpacer("20px"),
                     new SmallButtonWithIcon("Home", queryLinkFromName("Home"), "fa-home"),
