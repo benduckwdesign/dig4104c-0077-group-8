@@ -24,7 +24,7 @@ if (queryUserDarkMode("guest") == "on") {
 
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
-$included_components = ["PageWrapper", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon"];
+$included_components = ["CardNoLink", "PageWrapper", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon"];
 
 $a = 0;
 while ($a < count($included_components)) {
@@ -35,6 +35,11 @@ while ($a < count($included_components)) {
     $a++;
 }
 
+$currentyear = date("Y");
+$expectedgraduationdate = "N/A";
+// change to registration date later
+$beenastudentsince = date("Y");
+
 $page_elements = [
     "<div>",
     new NavSidebar($folder_to_root),
@@ -44,6 +49,11 @@ $page_elements = [
         ),
         new FlexRow(
             "<h1 style=\"line-height:1;\">Student Center</h1>"
+        ),
+        new FlexRow(
+            new CardNoLink("Current Year", "<b style=\"padding-left:10px;\">$currentyear</b>"),
+            new CardNoLink("Expected Graduation Date", "<b style=\"padding-left:10px;\">$expectedgraduationdate</b>"),
+            new CardNoLink("Been a Student Since", "<b style=\"padding-left:10px;\">$beenastudentsince</b>"),
         ),
         new FlexRow(
             new ExpandedCard("Academics", "See More", ""),
