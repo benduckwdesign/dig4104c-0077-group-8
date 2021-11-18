@@ -12,6 +12,7 @@ include_once(join(DIRECTORY_SEPARATOR, $path));
 $ds = DIRECTORY_SEPARATOR;
 $folder_to_root = "..".$ds."..";
 include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."queryLinkFromName.php");
+include(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."config.php");
 
 class NavSidebar extends BDComponent {
 
@@ -23,6 +24,8 @@ class NavSidebar extends BDComponent {
         $this->children = [
             new NavSidebarWrapper(
                 "<div style=\"top:0;position:absolute;\">",
+                    new VSpacer("20px"),
+                    "<img src=\"".$siteroot."images/tab300.png\">",
                     new VSpacer("20px"),
                     new SmallButtonWithIcon("Profile", queryLinkFromName("Profile"), "fa-user-circle"),
                     new VSpacer("20px"),
