@@ -26,7 +26,7 @@ include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."fonts.php");
 
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
-$included_components = ["CardNoLink", "PageWrapper", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon"];
+$included_components = ["Card", "PageWrapper", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "CardNoLink"];
 
 $a = 0;
 while ($a < count($included_components)) {
@@ -39,13 +39,8 @@ while ($a < count($included_components)) {
 
 include_once(__DIR__.$ds."..".$ds."backend".$ds."queryLinkFromName.php");
 
-$currentyear = date("Y");
-$expectedgraduationdate = "N/A";
-// change to registration date later
-$beenastudentsince = date("Y");
-
 $page_elements = [
-    new NavSidebar(),
+    new NavSidebar($folder_to_root),
     new MainContent(
         new FlexRow(
             "<div style=\"max-height:160px;overflow:hidden;\"><picture id=\"header-picture\" style=\"header-picture\">
@@ -60,21 +55,12 @@ $page_elements = [
             new VSpacer("20px")
         ),
         new FlexRow(
-            "<h1 style=\"line-height:1;\">Student Center</h1>"
+            "<h1 style=\"line-height:1;\">Academics</h1>"
         ),
         new FlexRow(
-            new CardNoLink("Current Year", "<b style=\"padding-left:10px;\">$currentyear</b>"),
-            new CardNoLink("Expected Graduation Date", "<b style=\"padding-left:10px;\">$expectedgraduationdate</b>"),
-            new CardNoLink("Been a Student Since", "<b style=\"padding-left:10px;\">$beenastudentsince</b>"),
+            new Card("Class Schedules", "Schedules", queryLinkFromName("View Class Schedule"), "<b>View your current class schedule.</b>"),
+            new Card("Enrollment", "Enroll", queryLinkFromName("Enrollment"), "<b>View available classes for each semester and enroll in classes here.</b>"),
         ),
-        new FlexRow(
-            new ExpandedCard("Academics", "Academics", queryLinkFromName("Academics")),
-            new ExpandedCard("Finances", "Finances", queryLinkFromName("Finances")),
-            new ExpandedCard("Housing", "Housing", queryLinkFromName("Housing")),
-            new ExpandedCard("Calendar", "Calendar", queryLinkFromName("Calendar")),
-            new ExpandedCard("Knights Email", "Knights Email", queryLinkFromName("Knights Email")),
-            new ExpandedCard("Quick Links", "Quick Links", queryLinkFromName("Quick Links"))
-        )
     ),
 ];
 

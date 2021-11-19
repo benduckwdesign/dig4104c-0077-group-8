@@ -34,6 +34,9 @@ if ($result == 1) {
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Contact Directory', '".$siteroot."contactdirectory/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Donate to UCF', 'https://www.ucf.edu/alumni-giving/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Sign Up', '".$siteroot."register/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Academics', '".$siteroot."academics/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Knights Email', 'https://knightsemail.ucf.edu/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Calendar', 'https://calendar.ucf.edu/2021/fall') ",
     ];
 
     $b = 0;
