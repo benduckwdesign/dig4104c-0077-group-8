@@ -26,7 +26,7 @@ if (queryUserDarkMode("guest") == "on") {
     $TEXT_COLOR = "#252525";
     $BACKGROUND_COLOR = "#e1e1e1";
     $TRANSPARENT_BG_COLOR = "rgba(255,255,255,0.2)";
-    $CARD_BG_COLOR = "rgba(255,255,255,0.6)";
+    $CARD_BG_COLOR = "#c4c4c4";
     $LINK_COLOR = "#716439";
     
 }
