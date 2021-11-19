@@ -61,7 +61,7 @@ $page_elements = [
             new VSpacer("20px")
         ),
         new FlexRow(
-            "<h1 style=\"line-height:1;\">Student Center</h1>"
+            "<h1 style=\"line-height:1;\">Dashboard</h1>"
         ),
         new FlexRow(
             new CardNoLink("Current Year", "<b style=\"padding-left:10px;\">$currentyear</b>"),

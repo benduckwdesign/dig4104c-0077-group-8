@@ -20,6 +20,8 @@ if (queryUserDarkMode("guest") == "on") {
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="<?=$folder_to_root?>/font-awesome-4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="./<?=$css_file?>" id="pagestyle"><title>UCF Student Center</title><meta name="og:title" content="UCF Student Center"><meta name="twitter:title" content="UCF Student Center"><meta name="description" content="UCF Student Center prototype for DIG4104."><meta name="og:description" content="UCF Student Center prototype for DIG4104."><meta name="author" content="Benjamin Duckworth"></head>
 <?php
 
+include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."fonts.php");
+
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
 $included_components = ["ProfileImageCircle", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "TextBlock"];
