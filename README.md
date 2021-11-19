@@ -84,6 +84,28 @@ If the application has not been set up yet, `backend/database_init.php` can be e
 
 If the application has already been set up, then you will need to edit the `urls` table in the MySQL database directly using a tool like dbeaver or phpmyadmin. Simply change only the value in the `url` column. Changing any of the `name` keys will render the application unable to find a specific resource. In the event a resource is not found, any given link or button will take the user to a 404 page.
 
+### Adding new cards to pages and adding new directories
+
+The original plan was to have a dynamically updatable site with a complete enrollment system, but due to time constraints and resource limitations this is unimplemented. In order to add new cards with links to pages or add new dashboard widgets, the PHP code must be edited directly. Thankfully, in the event links change they can be updated using the special `urls` table as long as the PHP code is rendering the link using the `queryLinkFromName` function which can be included from `backend/queryLinkFromName.php`.
+
+Each page has a special `$page_elements` variable which contains all of the elements and components that will be rendered to the page, similar to how components are rendered to HTML in the React.js framework. Each page has one `NavSidebar()` component which displays all of the main links when logged in as well as a `MainContent()` component which acts as a wrapper for the additional specific content that the page will display.
+
+To be mobile friendly, pages are made up of `FlexRow()` components that allow for content to wrap when the page is resized. Currently, the navigation sidebar remains the same even on mobile, but in the future it would be recommended to take advantage of media queries to give users more screen realestate as it can take up to 50% of the screen on smaller devices.
+
+So, in order to add a new card, as long as you are including the `Card()` component from `bd-kit/components/Card.php`, you could do something like the following:
+
+```php
+$page_elements = [
+    new NavSidebar(),
+    new MainContent(
+        new FlexRow(
+            new Card("Class Schedules", "Schedules", queryLinkFromName("View Class Schedule"), "<b>View your current class schedule.</b>"),
+        ),
+    ),
+];
+```
+The `Card()` component takes four arguments; The first argument is the title of the card, the second argument is the label for the anchor element, the third argument is the href url for the anchor element, and the fourth and onwards are additional children that will render inside of the card body. This could be text as is shown in the above example.
+
 ### Developing new components
 
 When making a new component, extend the BDComponent class from `/bd-kit/Component.php`.
