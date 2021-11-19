@@ -82,7 +82,7 @@ $page_elements = [
 			</div>"),
 			new ExpandedCard("Calendar", "Calendar", queryLinkFromName("Calendar"),
 			"<div>
-      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">11/8/21: DIG4104 Final Exam</p>
+      			<p style=\"color:$TEXT_COLOR; font: 'Gotham'; font-size:25px; padding:10px 26px; \">11/8/21: DIG4104 Final Exam</p>
 				<p style=\"color:black; font-size:25px; padding:10px 26px; \">11/24/21: Thanksgiving!</p>
       		</div>"),
 			new ExpandedCard("Knights Email", "Knights Email", queryLinkFromName("Knights Email"),
