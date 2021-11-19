@@ -10,6 +10,6 @@ $username = "root";
 $password = "";
 
 // Set the name of the database to use for MySQL.
-$database_name = "test";
+$database_name = "my_ucf_database";
 
 ?>
