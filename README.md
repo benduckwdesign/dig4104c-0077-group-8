@@ -140,7 +140,11 @@ Each of the items in the `$page_elements` array are recursively converted into H
 ### VSpacer
 
 ```php
-VSpacer("20px");
+include_once "bd-kit/components/VSpacer.php";
+
+$page_elements = [
+    VSpacer("20px"),
+];
 ```
 
 VSpacer, short for vertical spacer, acts as a margin between multiple FlexRow components. It only takes one argument, a string in which a CSS value for margin-top must be provided. The end result is rendered as an HTML div element. If any additional arguments are provided, they will be rendered inside of the div element.
