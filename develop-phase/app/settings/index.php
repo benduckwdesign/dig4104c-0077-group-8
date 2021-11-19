@@ -35,6 +35,41 @@ while ($a < count($included_components)) {
     $a++;
 }
 
+$settingsform = <<<END
+<form style="width:100%;" method="post" enctype="multipart/form-data" action="javascript:void(0);">
+<label for="language"><b>Language</b></label>
+<select name="language">
+<option value="en">English</option>
+<option value="es">Spanish</option>
+<option value="fr">French</option>
+<option value="ru">Russian</option>
+<option value="ja">Japanese</option>
+<option value="ko">Korean</option>
+<option value="ch">Chinese</option>
+<option value="ge">German</option>
+</select>
+<label for="timezone"><b>Time Zone</b></label>
+<select name="timezone">
+<option value="edt">Eastern Daylight Time</option>
+<option value="akdt">Alaska Daylight Time</option>
+<option value="cst">Central Daylight Time</option>
+<option value="mdt">Mountain Daylight Time</option>
+<option value="mst">Mountain Standard Time</option>
+<option value="pst">Pacific Standard Time</option>
+<option value="hst">Hawaii-Aleutian Standard Time</option>
+</select>
+<label for="theme"><b>Visual Theme</b></label>
+<select name="theme">
+<option value="edt">Light Mode</option>
+<option value="akdt">Dark Mode</option>
+</select>
+<label for="password"><b>Change Password</b></label>
+<input type="password" placeholder="Enter your current password." name="password"  />
+<input type="password" placeholder="Enter a new password." name="newpassword"  />
+<button type="submit">Save Changes</button>
+</form>
+END;
+
 $header_img_url = "https://www.ucf.edu/files/2021/03/myucf-login-bg-millicanhall-1600x550-opt.jpeg";
 $header_element = "<div style=\"height:160px;width:100%;overflow:hidden;background-size:cover;background-color:transparent;background-image:url('$header_img_url');\"></div>";
 
@@ -51,10 +86,7 @@ $page_elements = [
             "<h1 style=\"line-height:1;\">Settings</h1>"
         ),
         new FlexRow(
-            new SettingOption("Language"),
-            new SettingOption("Dark Mode"),
-            new SettingOption("Password Reset"),
-            new SettingOption("Time Zone"),
+            $settingsform
         )
     ),
 ];

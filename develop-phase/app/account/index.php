@@ -24,7 +24,7 @@ include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."fonts.php");
 
 $base_path = [__DIR__,$folder_to_root,"bd-kit","components"];
 
-$included_components = ["ProfileImageCircle", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "TextBlock"];
+$included_components = ["CardNoLink", "ProfileImageCircle", "MainContent", "NavSidebar", "FlexRow", "ExpandedCard", "VSpacer", "SmallButtonWithIcon", "TextBlock"];
 
 $a = 0;
 while ($a < count($included_components)) {
@@ -52,16 +52,32 @@ $page_elements = [
         ),
         new FlexRow(
             new ProfileImageCircle(),
+            "<h2>Guest User</h2>"
         ),
         new FlexRow(
-            new TextBlock("Profile Photo<br>"),
-            new TextBlock("Full Name<br>"),
-            new TextBlock("Pronouns<br>"),
-            new TextBlock("Address<br>"),
-            new TextBlock("Phone Number<br>"),
-            new TextBlock("Email Address<br>"),
-            new TextBlock("UCF ID<br>"),
-            new TextBlock("Emergency Contact<br>"),
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Profile Photo</b></p>"
+        ),
+        new FlexRow(
+            new CardNoLink("User Info",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Full Name</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">Guest User</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Pronouns</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">Other</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Address</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">Not Available</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Phone Number</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">(123) 555-5555</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Recovery Email Address</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">example@example.example</p>",),
+            new CardNoLink("UCF Info",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>UCF Email Address</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">example@knights.ucf.edu</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>UCF ID</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">ab1234546</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><b>Emergency Contact</b></p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\">Mom (Legal Guardian)</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><em>Home</em> (123) 555-5555</p>",
+            "<p style=\"width:100%;padding-left:10px;padding-bottom:10px;\"><em>Cell</em> (123) 555-5555</p>",)
         )
     ),
 ];
