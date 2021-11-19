@@ -1,11 +1,12 @@
 <?php
 
+session_start();
+
 $ds = DIRECTORY_SEPARATOR;
 
 // Set path to site root relative to current file for serving CSS.
 
-$folder_to_root = [".."];
-$folder_to_root = join($ds, $folder_to_root);
+$folder_to_root = "..";
 
 // Check and set CSS according to whether dark mode is enabled.
 
@@ -37,25 +38,41 @@ while ($a < count($included_components)) {
     $a++;
 }
 
-$msg = "";
+$ds = DIRECTORY_SEPARATOR;
+include(__DIR__.$ds."..".$ds."backend".$ds."config.php");
+
+$process_registration = $siteroot."backend/process_registration.php";
+
 $registerform = <<<END
-<form style="width:100%;" method="post" enctype="multipart/form-data" action=?#?>
-<label><b>Full Name</b></label>
-<input type="text" placeholder="Enter your full name." name = "fn" required />
-<label><b>Nickname</b></label>
-<input type="text" placeholder="What should we call you?" name = "nn" required />
-<label><b>Password</b></label>
-<input type="password" placeholder="Enter a password." name = "nn" required />
-<label><b>UCF Email Address</b></label>
-<input type="text" placeholder="Enter your UCF email address." name = "email" />
-<label><b>UCF ID Number</b></label>
-<input type="text" placeholder="Enter your UCF ID number." name = "ucfid" />
-<input type="button" value="Sign Up" />
+<form style="width:100%;" method="post" enctype="multipart/form-data" action="$process_registration">
+<label for="fullname"><b>Full Name</b></label>
+<input type="text" placeholder="Enter your full name." name="fullname" required />
+<label for="nickname"><b>Nickname</b></label>
+<input type="text" placeholder="What should we call you?" name="nickname" required />
+<label for="password"><b>Password</b></label>
+<input type="password" placeholder="Enter a password." name="password" required />
+<label for="email"><b>UCF Email Address</b></label>
+<input type="text" placeholder="Enter your UCF email address." name="email" />
+<label for="ucfid"><b>UCF ID Number</b></label>
+<input type="text" placeholder="Enter your UCF ID number." name="ucfid" />
+<button type="submit">Sign Up</button>
 </form>
 END;
 
+$notice = "";
+if (!empty($_SESSION['process_notice_unseen'])) {
+    if ($_SESSION['process_notice_unseen'] == True) {
+        $title = $_SESSION['process_notice_msg_title'];
+        $msg = $_SESSION['process_notice_msg'];
+        $notice = "<p style=\"width:100%;text-align:center;margin:0;\">$title</p><p style=\"width:100%;text-align:center;margin:0;\">$msg</p>";
+        $_SESSION['process_notice_unseen'] = False;
+    } else {
+        // ignore
+    }
+}
+
 $page_elements = [
-    new NavSidebar($folder_to_root),
+    new NavSidebar(),
     new MainContent(
         new FlexRow(
             "<div style=\"max-height:160px;overflow:hidden;\"><picture id=\"header-picture\" style=\"header-picture\">
@@ -76,6 +93,10 @@ $page_elements = [
         new FlexRow(
           "<h3 style=\"width:100%;text-align:center;margin:0;\">Welcome to UCF!</h3>",
           "<h4 style=\"width:100%;text-align:center;margin:0;\">Please use the form below to register.</h4>",
+        ),
+        new VSpacer("25px"),
+        new FlexRow(
+            $notice,
         ),
         new VSpacer("25px"),
         new FlexRow(

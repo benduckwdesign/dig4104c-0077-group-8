@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $ds = DIRECTORY_SEPARATOR;
 
 // Set path to site root relative to current file for serving CSS.
@@ -49,6 +51,18 @@ $registerform = <<<END
 </form>
 END;
 
+$notice = "";
+if (!empty($_SESSION['process_notice_unseen'])) {
+    if ($_SESSION['process_notice_unseen'] == True) {
+        $title = $_SESSION['process_notice_msg_title'];
+        $msg = $_SESSION['process_notice_msg'];
+        $notice = "<p style=\"width:100%;text-align:center;margin:0;\">$title</p><p style=\"width:100%;text-align:center;margin:0;\">$msg</p>";
+        $_SESSION['process_notice_unseen'] = False;
+    } else {
+        // ignore
+    }
+}
+
 $page_elements = [
     new NavSidebar($folder_to_root),
     new MainContent(
@@ -72,7 +86,11 @@ $page_elements = [
             "<h3 style=\"width:100%;text-align:center;margin:0;\">Welcome back!</h3>",
             "<h4 style=\"width:100%;text-align:center;margin:0;\">Please use the form below to log in.</h4>",
         ),
-        new VSpacer("50px"),
+        new VSpacer("25px"),
+        new FlexRow(
+            $notice,
+        ),
+        new VSpacer("25px"),
         new FlexRow(
             "$registerform",
         ),

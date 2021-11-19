@@ -18,7 +18,6 @@ class NavSidebar extends BDComponent {
     function __construct() {
 
         $arg_children = func_get_args();
-        $path_to_root = array_shift($arg_children);
         global $ds;
         global $folder_to_root;
         include(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."config.php");
