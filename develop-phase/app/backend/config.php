@@ -4,7 +4,7 @@
 $root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
 
 // Set to the subfolder where the site files are served from the site root. Example: app/
-$subfolder = "app/";
+$subfolder = "checkin_it_out/dig4104c-0077-group-8/develop-phase/app/";
 
 // This is set to the site root with the subfolder. Example: http://localhost/app/
 $siteroot = $root.$subfolder;
