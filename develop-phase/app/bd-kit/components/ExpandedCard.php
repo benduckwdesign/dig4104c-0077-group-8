@@ -40,7 +40,7 @@ class ExpandedCard extends BDComponent {
                                 "<div style=\"width:auto;\">",
                                     "<h6 style=\"padding:5px;line-height:1;\"><b>".$title_string."</b></h6>",
                                 "</div>",
-                                "<div style=\"min-height:max-content;width:auto;\">",
+                                "<div style=\"min-height:max-content;width:auto;background:$CARD_CONTENT_BG;\">",
                                     ...$arg_children,
                                 "</div>",
                                 "<div style=\"width:auto;\">",
