@@ -7,7 +7,7 @@ $servername = "localhost";
 $username = "root";
 
 // Set the password for the user accessing the MySQL database.
-$password = "dig4104c";
+$password = "";
 
 // Set the name of the database to use for MySQL.
 $database_name = "my_ucf_database";

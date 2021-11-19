@@ -151,3 +151,10 @@ $page_elements = [
 
 VSpacer, short for vertical spacer, acts as a margin between multiple FlexRow components. It only takes one argument, a string in which a CSS value for margin-top must be provided. The end result is rendered as an HTML div element. If any additional arguments are provided, they will be rendered inside of the div element.
 
+
+
+
+### Tucker's Additions
+
+I worked on adding the information within the boxes. I hope that you take the time to give me an update on what I need to add or change.
+
