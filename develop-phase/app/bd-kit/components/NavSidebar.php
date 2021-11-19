@@ -12,6 +12,7 @@ include_once(join(DIRECTORY_SEPARATOR, $path));
 $ds = DIRECTORY_SEPARATOR;
 $folder_to_root = "..".$ds."..";
 include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."queryLinkFromName.php");
+include_once(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."queryUserDarkMode.php");
 
 class NavSidebar extends BDComponent {
 
@@ -21,6 +22,13 @@ class NavSidebar extends BDComponent {
         global $ds;
         global $folder_to_root;
         include(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."config.php");
+
+        include(__DIR__.$ds.$folder_to_root.$ds."backend".$ds."config.php");
+        if (queryUserDarkMode("guest") == "on") {
+            $darkmodehref = $siteroot.'backend/disableDarkModeForGuest.php';
+        } else {
+            $darkmodehref = $siteroot.'backend/enableDarkModeForGuest.php';
+        }
 
         $this->children = [
             new NavSidebarWrapper(
@@ -35,7 +43,7 @@ class NavSidebar extends BDComponent {
                     new VSpacer("20px"),
                     new SmallButtonWithIcon("Settings", queryLinkFromName("Settings"), "fa-cog"),
                     new VSpacer("20px"),
-                    new SmallButtonWithIcon("Dark Mode", "", "fa-moon-o"),
+                    new SmallButtonWithIcon("Dark Mode", $darkmodehref, "fa-moon-o"),
                     new VSpacer("20px"),
                 "</div>",
                 "<div style=\"bottom:0;position:absolute;\">",

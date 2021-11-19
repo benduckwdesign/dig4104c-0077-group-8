@@ -47,6 +47,7 @@ $settingsform = <<<END
 <option value="ko">Korean</option>
 <option value="ch">Chinese</option>
 <option value="ge">German</option>
+<option value="arrr">Pirate-Speak</option>
 </select>
 <label for="timezone"><b>Time Zone</b></label>
 <select name="timezone">
@@ -60,8 +61,15 @@ $settingsform = <<<END
 </select>
 <label for="theme"><b>Visual Theme</b></label>
 <select name="theme">
-<option value="edt">Light Mode</option>
-<option value="akdt">Dark Mode</option>
+<option value="lightmode">Light Mode</option>
+<option value="darkmode">Dark Mode</option>
+</select>
+<label for="fontsize"><b>Font Size</b></label>
+<p name="fontsize" style="margin-bottom:20px;">Please use your browser's built-in zoom to increase or decrease font sizes.</p>
+<label for="dyslexia"><b>Dyslexic Font</b></label>
+<select name="dyslexia">
+<option value="off">Disabled</option>
+<option value="on">Enabled</option>
 </select>
 <label for="password"><b>Change Password</b></label>
 <input type="password" placeholder="Enter your current password." name="password"  />

@@ -19,7 +19,7 @@ if ($result == 1) {
     $sql = "CREATE TABLE `preferences` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `setting` VARCHAR(255) NOT NULL , `belongs_to` VARCHAR(255) NOT NULL , `value` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
     $result = $conn->query($sql);
 
-    $sql = "INSERT INTO `preferences`(`setting`,`belongs_to`,`value`) VALUES (`dark_mode`,`guest`,`on`)";
+    $sql = "INSERT INTO `preferences` (`id`, `setting`, `belongs_to`, `value`) VALUES (NULL, 'darkmode', 'guest', 'off')";
     $result = $conn->query($sql);
 
     $sql = "CREATE TABLE `urls` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `url` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;";
@@ -37,6 +37,10 @@ if ($result == 1) {
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Academics', '".$siteroot."academics/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Knights Email', 'https://knightsemail.ucf.edu/') ",
         "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Calendar', 'https://calendar.ucf.edu/2021/fall') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Quick Links', '".$siteroot."quicklinks/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Sign Up', '".$siteroot."register/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Sign In', '".$siteroot."signin/') ",
+        "INSERT INTO `urls` (`id`, `name`, `url`) VALUES (NULL, 'Sign Out', '".$siteroot."signout/') ",
     ];
 
     $b = 0;
