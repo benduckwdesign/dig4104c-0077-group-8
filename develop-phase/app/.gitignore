@@ -1,2 +1,4 @@
 burns*
 /old/
+**/backend/config.php
+**/backend/db_config.php

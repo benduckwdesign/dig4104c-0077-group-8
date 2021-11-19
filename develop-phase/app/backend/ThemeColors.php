@@ -9,12 +9,13 @@ if (queryUserDarkMode("guest") == "on") {
     GLOBAL $TRANSPARENT_BG_COLOR;
     GLOBAL $CARD_BG_COLOR;
     GLOBAL $LINK_COLOR;
+    GLOBAL $CARD_CONTENT_BG;
 
     $TEXT_COLOR = "#e1e1e1";
     $BACKGROUND_COLOR = "#3d3d3d";
     $TRANSPARENT_BG_COLOR = "rgba(0,0,0,0.2)";
-    $CARD_BG_COLOR = "rgba(0,0,0,0.4)"; 
-    // rgba(0,0,0,0.4)
+    $CARD_BG_COLOR = "rgba(0,0,0,0.4)";
+    $CARD_CONTENT_BG = "rgba(196, 196, 196, 0.2);";
     $LINK_COLOR = "#f7cb46";
 
 } else {
@@ -23,12 +24,13 @@ if (queryUserDarkMode("guest") == "on") {
     GLOBAL $TRANSPARENT_BG_COLOR;
     GLOBAL $CARD_BG_COLOR;
     GLOBAL $LINK_COLOR;
+    GLOBAL $CARD_CONTENT_BG;
 
     $TEXT_COLOR = "#252525";
     $BACKGROUND_COLOR = "#e1e1e1";
     $TRANSPARENT_BG_COLOR = "rgba(255,255,255,0.2)";
-    $CARD_BG_COLOR = "#c4c4c4";
-    // "rgba(255,255,255,0.6)";
+    $CARD_BG_COLOR = "rgba(255,255,255,0.6)";
+    $CARD_CONTENT_BG = "rgba(196, 196, 196, 0.2);";
     $LINK_COLOR = "#716439";
     
 }

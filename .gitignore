@@ -2,3 +2,5 @@
 pyautogui
 pyautogui/**
 develop-phase/xampp/**
+develop-phase/app/backend/db_config.php
+develop-phase/app/backend/config.php

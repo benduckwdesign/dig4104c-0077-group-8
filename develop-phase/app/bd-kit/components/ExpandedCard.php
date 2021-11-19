@@ -13,17 +13,18 @@ class ExpandedCard extends BDComponent {
         GLOBAL $TRANSPARENT_BG_COLOR;
         GLOBAL $CARD_BG_COLOR;
         GLOBAL $LINK_COLOR;
+        GLOBAL $CARD_CONTENT_BG;
 
         $arg_children = func_get_args();
         $title_string = array_shift($arg_children);
         $url_string = array_shift($arg_children);
         $url_href = array_shift($arg_children);
         if (count($arg_children) == 0) {
-            $this->children = ["<div style=\"display:block;flex-grow:1;width:400px;min-height:270px;color:".$TEXT_COLOR.";background-color:".$CARD_BG_COLOR.";border-radius:10px;margin:10px;\">",
+            $this->children = ["<div style=\"display:block;flex-grow:1;width:400px;min-height:max-content;color:".$TEXT_COLOR.";background-color:".$CARD_BG_COLOR.";border-radius:10px;margin:10px;\">",
                                 "<div style=\"width:auto;\">",
                                     "<h6 style=\"padding:5px;line-height:1;\"><b>".$title_string."</b></h6>",
                                 "</div>",
-                                "<div style=\"min-height:200px;width:auto;background-color:".$TRANSPARENT_BG_COLOR.";\">",
+                                "<div style=\"min-height:max-content;width:auto;\">",
                                 "</div>",
                                 "<div style=\"width:auto;\">",
                                     "<a href=\"".$url_href."\" style=\"font-weight:500;color:".$LINK_COLOR.";text-align:right;\">",
@@ -35,11 +36,11 @@ class ExpandedCard extends BDComponent {
                            "</div>"];
             return;
         } else {
-            $this->children = ["<div style=\"display:block;flex-grow:1;width:400px;min-height:270px;color:".$TEXT_COLOR.";background-color:".$CARD_BG_COLOR.";border-radius:10px;margin:10px;\">",
+            $this->children = ["<div style=\"display:block;flex-grow:1;width:400px;min-height:max-content;color:".$TEXT_COLOR.";background-color:".$CARD_BG_COLOR.";border-radius:10px;margin:10px;\">",
                                 "<div style=\"width:auto;\">",
                                     "<h6 style=\"padding:5px;line-height:1;\"><b>".$title_string."</b></h6>",
                                 "</div>",
-                                "<div style=\"min-height:200px;width:auto;background-color:".$TRANSPARENT_BG_COLOR.";\">",
+                                "<div style=\"min-height:max-content;width:auto;\">",
                                     ...$arg_children,
                                 "</div>",
                                 "<div style=\"width:auto;\">",

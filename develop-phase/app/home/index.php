@@ -38,11 +38,12 @@ while ($a < count($included_components)) {
 }
 
 include_once(__DIR__.$ds."..".$ds."backend".$ds."queryLinkFromName.php");
+include_once(__DIR__.$ds."..".$ds."backend".$ds."ThemeColors.php");
 
-$currentyear = date("Y");
-$expectedgraduationdate = "N/A";
+$currentyear = "Fall ".date("Y");
+$expectedgraduationdate = "Spring 2022";
 // change to registration date later
-$beenastudentsince = date("Y");
+$beenastudentsince = "2017";
 
 $page_elements = [
     new NavSidebar(),
@@ -69,29 +70,34 @@ $page_elements = [
         ),
         new FlexRow(
 			new ExpandedCard("Academics", "Academics", queryLinkFromName("Academics"),
-			"<div> 
-				<p style=\"color:black; font-size:25px; padding:10px 26px; \">DIG4104 A+</p>
+			"<div>
+				<p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">DIG4104 <b>92.44%</b></p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">MMC3630 <b>94.86%</b></p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">DIG3146 <b>101%</b></p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:3px; \">DIG3175 <b>96.85%</b></p>
 			</div>"),
 			new ExpandedCard("Finances", "Finances", queryLinkFromName("Finances"),
-			"<div>  
-      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">200$</p>
+			"<div>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">Tuition and Fees</p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \"><b>$4,009.36</b></p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">Payment Pending</p>
       		</div>"),
 			new ExpandedCard("Housing", "Housing", queryLinkFromName("Housing"),
 			"<div>
-      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">You are currently living in Towers! Your rent is 1200$</p>
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:5px; \">You are currently living in Towers, and your rent due for this semester is $1,200.</p>
 			</div>"),
 			new ExpandedCard("Calendar", "Calendar", queryLinkFromName("Calendar"),
-			"<div>
-      			<p style=\"color:$TEXT_COLOR; font: 'Gotham'; font-size:25px; padding:10px 26px; \">11/8/21: DIG4104 Final Exam</p>
-				<p style=\"color:black; font-size:25px; padding:10px 26px; \">11/24/21: Thanksgiving!</p>
+			"<div> 
+                <p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:3px; \">Gobble gobble!</p>
+				<p style=\"color:$TEXT_COLOR; font-size:25px; padding-left:10px; padding-bottom:3px; \">Thanksgiving in 6 days.</p>
       		</div>"),
 			new ExpandedCard("Knights Email", "Knights Email", queryLinkFromName("Knights Email"),
-			"<div>
-				<p style=\"color:black; font-size:25px; padding:10px 26px; \">This is for your email! All the important messages that come into your inbox are here!</p>		
+			"<div> 
+				<p style=\"color:$TEXT_COLOR; font-size:25px; padding:10px 26px; \">14 unread emails, 2 important</p>		
       		</div>"),
 			new ExpandedCard("Quick Links", "Quick Links", queryLinkFromName("Quick Links"),
-			"<div>
-      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">Here is some text that I think would be very beneficial to use. I hope it helps out greatly!</p>
+			"<div> 
+      			<p style=\"color:$TEXT_COLOR; font-size:25px; padding:10px 26px; \">MyKnightStar, Enrollment dates and times, Program Advisor, & more</p>
       		</div>"),
         )
     ),
