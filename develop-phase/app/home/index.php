@@ -68,12 +68,37 @@ $page_elements = [
             new CardNoLink("Been a Student Since", "<b style=\"padding-left:10px;\">$beenastudentsince</b>"),
         ),
         new FlexRow(
-            new ExpandedCard("Academics", "Academics", queryLinkFromName("Academics")),
-            new ExpandedCard("Finances", "Finances", queryLinkFromName("Finances")),
-            new ExpandedCard("Housing", "Housing", queryLinkFromName("Housing")),
-            new ExpandedCard("Calendar", "Calendar", queryLinkFromName("Calendar")),
-            new ExpandedCard("Knights Email", "Knights Email", queryLinkFromName("Knights Email")),
-            new ExpandedCard("Quick Links", "Quick Links", queryLinkFromName("Quick Links"))
+			new ExpandedCard("Academics", "Academics", queryLinkFromName("Academics"),
+			"<div style=
+            \"background-color:darkgrey;height:200px; \">
+            <p style=\"color:black; font-size:25px; padding:10px 26px; \">DIG4104 A+</p>
+            </div>"),
+			new ExpandedCard("Finances", "Finances", queryLinkFromName("Finances"),
+			"<div style=
+      			\"background-color:darkgrey;height:200px; \">
+      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">200$</p>
+      			</div>"),
+			new ExpandedCard("Housing", "Housing", queryLinkFromName("Housing"),
+			"<div style=
+      			\"background-color:darkgrey;height:200px; \">
+      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">You are currently living in Towers! Your rent is 1200$</p>
+      			</div>"),
+			new ExpandedCard("Calendar", "Calendar", queryLinkFromName("Calendar"),
+			"<div style=
+      			\"background-color:darkgrey;height:200px; \">
+      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">11/8/21: DIG4104 Final Exam</p>
+				<p style=\"color:black; font-size:25px; padding:10px 26px; \">11/24/21: Thanksgiving!</p>
+      			</div>"),
+			new ExpandedCard("Knights Email", "Knights Email", queryLinkFromName("Knights Email"),
+			"<div style=
+      			\"background-color:darkgrey;height:200px; \">
+				<p style=\"color:black; font-size:25px; padding:10px 26px; \">This is for your email! All the important messages that come into your inbox are here!</p>		
+      			</div>"),
+			new ExpandedCard("Quick Links", "Quick Links", queryLinkFromName("Quick Links"),
+			"<div style=
+      			\"background-color:darkgrey;height:200px; \">
+      			<p style=\"color:black; font-size:25px; padding:10px 26px; \">Here is some text that I think would be very beneficial to use. I hope it helps out greatly!</p>
+      			</div>"),
         )
     ),
 ];
