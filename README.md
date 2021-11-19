@@ -134,3 +134,29 @@ echo $child_html;
 ```
 
 Each of the items in the `$page_elements` array are recursively converted into HTML code via the make_html method inherited from the BDComponent class. Strings of HTML code are left as is.
+
+## Essential Components
+
+### VSpacer
+
+```php
+class VSpacer extends BDComponent {
+
+    function __construct() {
+
+        $arg_children = func_get_args();
+        $margin_top = array_shift($arg_children);
+        $this->children = ["<div style=\"margin-top:".$margin_top.";\">", "</div>"];
+        if (count($arg_children) == 0) {
+            return;
+        } else {
+            $this->children = [$this->children[0], ...$arg_children, $this->children[1]];
+            return;
+        }
+    }
+
+}
+```
+
+VSpacer, short for vertical spacer, acts as a margin between multiple FlexRow components. It only takes one argument, a string in which a CSS value for margin-top must be provided. The end result is rendered as an HTML div element. If any additional arguments are provided, they will be rendered inside of the div element.
+
