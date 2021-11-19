@@ -13,7 +13,7 @@ class MainContent extends BDComponent {
         GLOBAL $TRANSPARENT_BG_COLOR;
 
         $arg_children = func_get_args();
-        $this->children = ["<div style=\"width:(100%-200px);min-height:100vh;height:100vh;overflow-y:scroll;align-items:center;color:".$TEXT_COLOR.";margin:0px auto;margin-left:200px;background-color:".$BACKGROUND_COLOR.";\">", "</div>"];
+        $this->children = ["<div style=\"width:(100%-209px);min-height:100vh;height:100vh;overflow-y:scroll;align-items:center;color:".$TEXT_COLOR.";margin:0px auto;margin-left:209px;background-color:".$BACKGROUND_COLOR.";\">", "</div>"];
         if (count($arg_children) == 0) {
             return;
         } else {
