@@ -40,7 +40,7 @@ while ($a < count($included_components)) {
 include_once(__DIR__.$ds."..".$ds."backend".$ds."queryLinkFromName.php");
 
 $page_elements = [
-    new NavSidebar($folder_to_root),
+    new NavSidebar(),
     new MainContent(
         new FlexRow(
             "<div style=\"max-height:160px;overflow:hidden;\"><picture id=\"header-picture\" style=\"header-picture\">
