@@ -47,7 +47,9 @@ $siteroot = $root.$subfolder;
 
 In order for the site to work properly, you will need to visit the root URL of where the app is being served and be redirected from there to `home/` at least once. Alternatively, you can visit `backend/database_init.php`.
 
-If the configuration is set properly, all of the databases should be created and populated in the MySQL server. In the event you update from an older version, just drop the table named `setup` and visit the root URL again. The site will only initialize the database if that table is missing.
+If the configuration is set properly, all of the database tables should be created and populated in the MySQL server. In the event you update from an older version, just drop the table named `setup` and visit the root URL again. The site will only initialize the database if that table is missing.
+
+Make sure you have created an empty database using the tool of your choice (phpmyadmin, dbeaver, etc.)
 
 ### Testing dark mode as guest
 
