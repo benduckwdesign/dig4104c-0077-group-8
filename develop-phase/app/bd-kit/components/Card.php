@@ -13,6 +13,7 @@ class Card extends BDComponent {
         GLOBAL $TRANSPARENT_BG_COLOR;
         GLOBAL $CARD_BG_COLOR;
         GLOBAL $LINK_COLOR;
+        GLOBAL $CARD_CONTENT_BG;
 
         $arg_children = func_get_args();
         $title_string = array_shift($arg_children);
@@ -39,7 +40,7 @@ class Card extends BDComponent {
                                 "<div style=\"width:auto;\">",
                                     "<h6 style=\"padding:5px;line-height:1;\"><b>".$title_string."</b></h6>",
                                 "</div>",
-                                "<div style=\"min-height:max-content;width:auto;background-color:".$TRANSPARENT_BG_COLOR.";\">",
+                                "<div style=\"min-height:max-content;width:auto;background:".$CARD_CONTENT_BG.";\">",
                                     "<div style=\"margin-left:10px;\">",
                                         ...$arg_children,
                                     "</div>",
