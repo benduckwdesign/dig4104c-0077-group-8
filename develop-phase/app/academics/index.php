@@ -57,6 +57,7 @@ $page_elements = [
         new FlexRow(
             new Card("Class Schedules", "Schedules", queryLinkFromName("View Class Schedule"), "<b>View your current class schedule.</b>"),
             new Card("Enrollment", "Enroll", queryLinkFromName("Enrollment"), "<b>View available classes for each semester and enroll in classes here.</b>"),
+            new Card("Grades", "View Grades", queryLinkFromName("Grades"), "<b>View grade history or grades for the current semester here.</b>"),
         ),
     ),
 ];
